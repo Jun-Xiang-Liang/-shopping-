@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>首頁</title>
+    <link rel="stylesheet" href="	https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <script src="	https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+        #apple {
+            width: 800px;
+
+            height: 300px;
+            object-fit: cover;
+        }
+
+
+
+        .a06 {
+            display: none;
+        }
+
+        .a06 a:hover {
+            color: #ff0a4f !important;
+        }
+
+
+        .a05 {
+            margin-left: 300px;
+            margin-top: 55px;
+        }
+
+        .a05 :hover>.a06 {
+            display: block;
+        }
+
+        .e04 {
+            position: fixed;
+            top: 0px;
+            bottom: 0px;
+            left: 0px;
+            right: 0px;
+            background-color: rgba(0, 0, 0, 0.72);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 2;
+        }
+
+        .e05 {
+            visibility: hidden;
+        }
+
+        /* visibility: visible; */
+    </style>
+</head>
+
+<body style=" width:100%; background-color: #E1DCD9;">
+
+    <div class="row">
+        <nav class="col-12 navbar navbar-expand-lg " style="width: 100%; background-color:#934A5F; ">
+            <div class="container-fluid ">
+                <a class="navbar-brand" href="#" style="margin-left:100px; color: #E5E5E5"><B>SHOPEEEE</B> </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse " id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="#" style="color:white;">賣家中心</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" style="color:white;">幫助中心</a>
+                        </li>
+                    </ul>
+                    <ul class=" navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item dropdown">
+                            <a style="color:white" class="nav-link dropdown-toggle" href="#" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false" id="navbarDropdown">
+                                語言
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="#">繁體中文</a></li>
+                                <li><a class="dropdown-item" href="#">English</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a style="color:white" class="nav-link" href="./註冊.2.19.html" style="margin-right:100px">登入/註冊</a>
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+        </nav>
+
+        <div class="col-12 d01" style="width: 100%; height: 140px; background-color:#c4b6ae;">
+            <div class=" row">
+                <div class="col-12 mt-2 d-inline-flex " style=" margin-left: 150px; width: 1300px;">
+                    <div class="row ">
+                        <div class="col-1">
+                            <a href="#">
+                                <img style=" width: 130px;" src="./IMG/logo.png">
+                            </a>
+                        </div>
+                        <!-- <div class="col-11 bg-warning" style="border-radius: 10px;
+                                                         z-index: 20;
+                                                         width: 900px;
+                                                         height:75px;
+                                                         margin-left: 90px;">
+                </div> -->
+
+
+                        <!-- 往上移 搜尋框繪製頂 -->
+                        <div class="col-11 ">
+                            <div class="row " style="width: 1100px">
+                                <input class="col-8 mt-3 " style="margin-left: 100px; height:50px;width:600px"
+                                    type="text" placeholder="輸入想要的商品">
+                                <button class="col-2 mt-2 " type="button" style="background-color: transparent;
+                                               border:none; 
+                                               margin-left:-110px;">
+                                    <div class="ms-5 mt-2 "
+                                        style="border-radius: 8px;background-color: #3a4567 ; width:40px;height:40px">
+                                        <i class="bi bi-search"
+                                            style="font-size: 25px; color:white;text-align: center;"></i>
+                                    </div>
+                                </button>
+                                <a href="#" class="col-2 ms-auto mt-2 " style="color:white;;">
+                                    <i class="bi bi-cart-fill" style="font-size: 40px;"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 a05 " style="width: 1150px; position: relative; left:20px; bottom: 90px;">
+                    <ul style="text-decoration:none;list-style:none">
+                        <li>
+                            <a class="btn  me-3 px-3 py-1" href="#"
+                                style=" color:white;     background-color:#765c57; height:25px;font-size: 0.85rem;">
+                                服飾</a>
+                            <a class="btn  me-3 px-3 py-1" href="#"
+                                style=" color:white;     background-color: #765c57; height:25px;font-size: 0.85rem;">手機</a>
+                            <a class="btn  me-3 px-3 py-1" href="#"
+                                style=" color:white;     background-color: #765c57; height:25px;font-size: 0.85rem;">家電</a>
+                            <a class="btn  me-3 px-3 py-1" href="#"
+                                style=" color:white;     background-color: #765c57; height:25px;font-size: 0.85rem;">日常用品</a>
+                            <a class="btn  me-3 px-3 py-1" href="#"
+                                style=" color:white;     background-color: #765c57; height:25px;font-size: 0.85rem;">書籍</a>
+                            <a class="btn  me-3 px-3 py-1" href="#"
+                                style=" color:white;     background-color: #765c57; height:25px;font-size: 0.85rem;">包包</a>
+                            <a class="btn  me-3 px-3 py-1" href="#"
+                                style=" color:white;     background-color: #765c57; height:25px;font-size: 0.85rem;">電腦</a>
+                            <a class="btn  me-3 px-3 py-1" href="#"
+                                style=" color:white;     background-color: #765c57; height:25px;font-size: 0.85rem;">食品</a>
+                            <a class="btn  me-3 px-3 py-1" href="#"
+                                style=" color:white;     background-color: #765c57; height:25px;font-size: 0.85rem;">禮品</a>
+                            <a class="btn  me-3 px-3 py-1" href="#"
+                                style=" color:white;     background-color: #765c57; height:25px;font-size: 0.85rem;">保護殼</a>
+                            <a class="btn  me-3 px-3 py-1" href="#"
+                                style=" color:white;     background-color: #765c57; height:25px;font-size: 0.85rem;">交換禮物</a>
+                            <a class="btn  me-3 px-3 py-1" href="#"
+                                style=" color:white;     background-color: #765c57; height:25px;font-size: 0.85rem;">乾燥花</a>
+                        </li>
+                        <div class="a06"
+                            style=" border-radius: 10px ; width:1000px;height: 300px; ;z-index: 1; background-color: rgba(255, 255, 255,0.7); position: absolute;">
+                            <div class="ms-3 mt-4">
+                                <li class="mt-3 " style="line-height:30px">
+                                    <a href="#" style="text-decoration:none;color:black;margin-right: 45px;">衣服</a>
+                                    <a href="#" style="text-decoration:none;color:black;margin-right: 43px;">蘋果</a>
+                                    <a href="#" style="text-decoration:none;color:black;margin-right: 48px">冰箱</a>
+                                    <a href="#" style="text-decoration:none;color:black;margin-right: 40px">洗衣精</a>
+                                    <a href="#" style="text-decoration:none;color:black;margin-right: 21px">推理小說</a>
+                                    <a href="#" style="text-decoration:none;color:black;margin-right: 35px">電腦包</a>
+                                    <a href="#" style="text-decoration:none;color:black;margin-right: 43px">蘋果</a>
+                                    <a href="#" style="text-decoration:none;color:black;">餅乾</a>
+                                </li>
+                                <li style="line-height:30px">
+                                    <a href="#" style="text-decoration:none;color:black;margin-right: 45px;">長褲</a>
+                                    <a href="#" style="text-decoration:none;color:black;margin-right: 38px">Sony</a>
+                                    <a href="#" style="text-decoration:none;color:black;margin-right: 48px">電視</a>
+                                    <a href="#" style="text-decoration:none;color:black;margin-right: 55px">電池</a>
+                                    <a href="#" style="text-decoration:none;color:black;margin-right: 54px">漫畫</a>
+                                    <a href="#" style="text-decoration:none;color:black;margin-right: 35px">後背包</a>
+                                    <a href="#" style="text-decoration:none;color:black;margin-right: 45px">MSI</a>
+                                    <a href="#" style="text-decoration:none;color:black">糖果</a>
+
+                                </li>
+                                <li style="line-height:30px">
+                                    <a href="#" style="text-decoration:none;color:black;margin-right: 45px;">外套</a>
+                                    <a href="#" style="text-decoration:none;color:black;margin-right: 4px;">Samsung</a>
+                                    <a href="#" style="text-decoration:none;color:black;margin-right: 34px;">洗衣機</a>
+                                    <a href="#" style="text-decoration:none;color:black;margin-right: 39px;">洗手乳</a>
+                                    <a href="#" style="text-decoration:none;color:black;margin-right: 22px;">驚悚小說</a>
+                                    <a href="#" style="text-decoration:none;color:black;margin-right: 36px;">斜背包</a>
+                                    <a href="#" style="text-decoration:none;color:black;;margin-right: 32px;">ASUS</a>
+                                    <a href="#" style="text-decoration:none;color:black">海苔</a>
+
+                                </li>
+                                <li style="line-height:30px">
+                                    <a href="#" style="text-decoration:none;color:black;margin-right: 51px;">帽T</a>
+                                    <a href="#" style="text-decoration:none;color:black;margin-right: 20px">Google</a>
+                                    <a href="#" style="text-decoration:none;color:black;margin-right: 49px">檯燈</a>
+                                    <a href="#" style="text-decoration:none;color:black;margin-right: 55px">毛巾</a>
+                                    <a href="#" style="text-decoration:none;color:black;margin-right: 54px">食譜</a>
+                                    <a href="#" style="text-decoration:none;color:black;margin-right: 36px">波特包</a>
+                                    <a href="#" style="text-decoration:none;color:black;margin-right: 41px">acer</a>
+                                    <a href="#" style="text-decoration:none;color:black">微波食品</a>
+
+                                </li>
+                                <li style="line-height:30px">
+                                    <a href="#" style="text-decoration:none;color:black;margin-right: 45px">西裝</a>
+                                    <a href="#" style="text-decoration:none;color:black;margin-right: 22px">Xiaomi</a>
+                                    <a href="#" style="text-decoration:none;color:black;margin-right: 34px">電風扇</a>
+                                    <a href="#" style="text-decoration:none;color:black;margin-right: 54px">牙膏</a>
+                                    <a href="#" style="text-decoration:none;color:black;margin-right: 39px">工具書</a>
+                                    <a href="#" style="text-decoration:none;color:black;margin-right: 51px">腰包</a>
+                                    <a href="#" style="text-decoration:none;color:black;margin-right: 36px">DELL</a>
+                                    <a href="#" style="text-decoration:none;color:black">腰果</a>
+
+                                </li>
+                                <li style="line-height:30px">
+                                    <a href="#" style="text-decoration:none;color:black;margin-right: 45px">布鞋</a>
+                                    <a href="#" style="text-decoration:none;color:black;margin-right: 208px">ASUS</a>
+                                    <a href="#" style="text-decoration:none;color:black;margin-right: 188px">考試用書</a>
+                                    <a href="#" style="text-decoration:none;color:black;">罐頭</a>
+
+                                </li>
+                            </div>
+                        </div>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div style="width: 100%; background-color:#f8f6f4;">
+        <div class="container">
+            <div class=" d-flex ">
+                <div class=" col-2">
+                    <div class="card col-12 text-center mt-5"
+                        style="width: 12rem; border:3px solid #2B2D42;border-radius: 10px;">
+                        <img src="https://cs-c.ecimg.tw/items/DYAJ931900FH44E/000001_1675417773.jpg"
+                            class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title mb-3" style="font-size:16px">iphone 14 Plus 128G</h5>
+                            <p class="card-text" style="font-size:12px">
+                                • 6.7 吋超 Retina XDR 顯示器 <br>
+                                • 先進的相機系統，在任何光線環境都能拍攝更出色的照片<br>
+                                • 電影級模式，現在支援最高可達 30 fps 的 4K 杜比視界<br>
+                                • 動作模式，拍攝手持影片又順又穩</p>
+                            <a href="#" class="btn btn-warning ">立刻購買!</a>
+                        </div>
+                    </div>
+                    <div class="card col-12 mt-2 text-center"
+                        style="width: 12rem;width: 12rem; border:3px solid #2B2D42;border-radius: 10px;">
+                        <img src="https://cs-d.ecimg.tw/items/DHAS1UA900EUD1O/000001_1673572810.jpg"
+                            class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title mb-3" style="font-size:16px">ASUS TUF Gaming
+                                ASUS FX506HM-0072B11400H 戰魂黑</h5>
+                            <p class="card-text" style="font-size:12px">
+                                • 全新顯卡視覺享受 RTX 3060獨顯6G效能 <br>
+                                • 超屌效能 搭載2021新世代 Intel® Core™ i5-11400H Processor 2.7 GHz 處理器<br>
+                                • 全新升級 薄邊框螢幕 144Hz<br></p>
+                            <a href="./商品介紹 2.17.HTML" class="btn btn-warning ">立刻購買!</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-8 ms-5 mt-5"
+                    style="border-radius: 20px ;border:3px solid #32435F; position: relative; background-color: white;">
+                    <h3 class="ms-3 mt-2 " style=" color:#ef9000d9;"><b>限時特賣</b> </h3>
+                    <div class="row">
+                        <div id="apple" class="carousel slide col-12 mt-3 ms-5" data-bs-interval="2000"
+                            data-bs-ride="carousel">
+                            <div class="carousel-indicators">
+                                <button type="button" data-bs-target="#apple" data-bs-slide-to="0" class="active"
+                                    aria-current="true" aria-label="Slide 1"></button>
+                                <button type="button" data-bs-target="#apple" data-bs-slide-to="1"
+                                    aria-label="Slide 2"></button>
+                                <button type="button" data-bs-target="#apple" data-bs-slide-to="2"
+                                    aria-label="Slide 3"></button>
+                            </div>
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <a href="#">
+                                        <img id="a03"
+                                            src="https://fs-a.ecimg.tw/img/h24/v2/layout/index/hero/063ddbcc0274bf63ddbcc027531ecman2/3_1_20230204101212.jpg">
+                                    </a>
+                                </div>
+                                <div class="carousel-item">
+                                    <a href="#">
+                                        <img id="a03"
+                                            src="https://fs-a.ecimg.tw/img/h24/v2/layout/index/hero/063ddbcc0274bf63ddbcc027531ecman2/4_1_20230204145947.jpg">
+                                    </a>
+                                </div>
+                                <div class="carousel-item">
+                                    <a href="">
+                                        <img id="a03"
+                                            src="https://fs-a.ecimg.tw/img/h24/v2/layout/index/hero/063ddbcc0274bf63ddbcc027531ecman2/6_1_20230204101212.jpg">
+                                    </a>
+                                </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#apple"
+                                data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#apple"
+                                data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
+                        <div class="col-12">
+                            <div class="row">
+                                <div class="col-6 mt-5">
+                                    <div class="row">
+                                        <div class="col-12 ms-3">
+                                            <a href="#">
+                                                <img src="https://img3.momoshop.com.tw/ecm/img/online/31/001/00/905/bt_9_001_01/bt_9_001_01_e2.jpg?t=1670231826847"
+                                                    style=" width: 100%">
+                                            </a>
+                                        </div>
+                                        <div class="col-12 mt-3 ms-3">
+                                            <a href="#">
+                                                <img src="./tw-50009109-f8ae43d253bac61477b2285e5bfd5603.jpg"
+                                                    style="width:420px">
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-6 mt-5 ms-auto">
+                                    <a href="">
+                                        <img src="https://fs-a.ecimg.tw/img/h24/v2/layout/index/fiveBanner/063dc71ee7774063dc71ee77793ecman2/0_1_20230203163818.jpg"
+                                            style="width:400px; height:270px;">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 mt-3">
+                            <a href="#">
+                                <img src="https://fs-a.ecimg.tw/img/h24/v2/layout/index/hero/063d8f751bc2db63d8f751bc31fecman1/5_1_20230208153640.jpg"
+                                    style="width: 830px; height:300px" class="ms-3 mb-3">
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-2 mt-5 ms-2" style="width:240px; 
+                       height:340px ; 
+                       border:3px solid #2B2D42;
+                       background-color: white;
+                       border-radius: 20px;">
+                    <div class="row">
+                        <div class="col-12 mt-3">
+                            <h2 style="text-align: center; color: #332927"><b>會員中心</b> </h2>
+                        </div>
+                        <div class="row ms-2 mt-2">
+                            <div class="col-12">
+                                <div class="row">
+                                    <div class="col-6">
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <a href="#" style="color:#62464e;"><i class="bi bi-person-circle ms-3"
+                                                        style="font-size: 50px"></i></a>
+                                            </div>
+                                            <div class="col-12">
+                                                <a href="#"
+                                                    style="text-decoration:none; color:#62464e; font-size: 23px;">會員資料</a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-6">
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <a href="#" style="color: #62464e;"><i class="bi bi-search-heart ms-3"
+                                                        style="font-size: 50px"></i></a>
+                                            </div>
+                                            <div class="col-12">
+                                                <a href="#"
+                                                    style="text-decoration:none; color:#62464e; font-size: 23px;">最近瀏覽</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-12 mt-3">
+                                <div class="row">
+                                    <div class="col-6">
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <a href="#" style="color: #62464e;"><i
+                                                        class="bi bi-emoji-heart-eyes ms-3"
+                                                        style="font-size: 50px"></i></a>
+                                            </div>
+                                            <div class="col-12">
+                                                <a href="#"
+                                                    style="text-decoration: none; color: #62464e; font-size: 23px;">按讚商品</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <a href="#" style="color:#62464e;"><i
+                                                        class="bi bi-clipboard2-check ms-3"
+                                                        style="font-size: 50px"></i></a>
+                                            </div>
+                                            <div class="col-12">
+                                                <a href="#"
+                                                    style="text-decoration: none; color: #62464e; font-size: 23px;">訂單狀況</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-2">
+
+                    <div class="row"
+                        style="height:535px; background-color: white; border:3px solid #2B2D42;border-radius: 10px;">
+                        <h3 class="col-12 mt-3" style="text-align: center;color: #ef9000d9 "><b>熱門商品</b> </h3>
+                        <a class="col-12" href="#">
+                            <img src="https://i3.momoshop.com.tw/1671013047/goodsimg/0010/564/376/10564376_R.webp"
+                                style="width:200px;margin-top: 10px;">
+                        </a>
+
+                        <a class="col-12 mt-3 ;" href="#">
+                            <img src="https://i4.momoshop.com.tw/1671179013/goodsimg/0010/320/227/10320227_R.webp"
+                                style=" width:200px;">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-8" style=" margin-left: 45px;">
+                    <div>
+                        <div class="d-flex"
+                            style="background-color: white; width: 865px; height:280px;border:3px solid #2B2D42;border-radius: 10px;">
+
+                            <div class="mt-2">
+                                <h3 class="ms-3 " style="color:#ef9000d9"><b>優惠活動</b> </h3>
+                                <div class="col-12 ms-1 ">
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <a href="#">
+                                                <img style="width:400px;height:210px "
+                                                    src="https://cf.shopee.tw/file/6cdcda7ee3516ecf285c3a32893a8c16">
+                                            </a>
+                                        </div>
+                                        <div class="col-6">
+                                            <div class="row">
+                                                <div class="col-12">
+                                                    <a href="#">
+                                                        <img class="mb-2" style="width:400px;height:100px"
+                                                            src="./IMG/tw-50009109-f8ae43d253bac61477b2285e5bfd5603.jpg">
+                                                    </a>
+                                                </div>
+                                                <div class="col-12">
+                                                    <a href="#">
+                                                        <img style="width:400px;height:100px" src="./IMG/螢幕擷取畫面 2023-02-07 150714.png">
+                                                    </a>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    <div style="background-color: white; width: 865px; height:230px;border:3px solid #2B2D42;border-radius: 10px;"
+                        class="d-flex mb-3">
+                        <div class="mt-2">
+                            <h3 class="ms-3" style="color:#ef9000d9"><b>分類</b> </h3>
+                            <div class="col-12 d-inline-flex ms-4">
+                                <div class="card me-3" style="width:150px; border:1px solid #c10439 ">
+                                    <div class="card-header">
+                                        <a href="#">
+                                            <img style="width:150px;height:120px"
+                                                src="https://bpic.51yuansu.com/pic3/cover/03/32/75/5b8681cf2a6b6_610.jpg"
+                                                class="img-fluid">
+                                        </a>
+                                    </div>
+                                    <h5 class="card-title text-center">服飾</h5>
+                                </div>
+                                <div class="card me-3" style="width:150px;border:1px solid #c10439 ">
+                                    <div class="card-header">
+                                        <a href="#">
+                                            <img style="width:150px;height:120px"
+                                                src="https://material.ncku.edu.tw/_data/i/upload/2017/02/18/20170218151926-1ce9efcf-me.png"
+                                                class="img-fluid">
+                                        </a>
+                                    </div>
+                                    <h5 class="card-title text-center">3C</h5>
+                                </div>
+                                <div class="card me-3" style="width:150px;border:1px solid #c10439 ">
+                                    <div class="card-header">
+                                        <a href="#">
+                                            <img style="width:150px;height:120px"
+                                                src="data:image/jpeg;base64,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"
+                                                class="img-fluid">
+                                        </a>
+                                    </div>
+                                    <h5 class="card-title text-center">家電</h5>
+                                </div>
+                                <div class="card me-3" style="width:150px;border:1px solid #c10439 ">
+                                    <div class="card-header">
+                                        <a href="#">
+                                            <img style="width:150px;height:120px"
+                                                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOl3juHfxNixCwc5jdy1UQZd6BU1S5gJOdT9t2Uozn8QLDBovVjN6JGTAFvJgjrxey0x0&usqp=CAU"
+                                                class="img-fluid">
+                                        </a>
+                                    </div>
+                                    <h5 class="card-title text-center">日常用品</h5>
+                                </div>
+
+                                <div class="card me-3s" style="width:150px;border:1px solid #c10439 ">
+                                    <div class="card-header">
+                                        <a href="#">
+                                            <img style="width:150px;height:120px"
+                                                src="https://en.pimg.jp/022/537/982/1/22537982.jpg" class="img-fluid">
+                                        </a>
+                                    </div>
+                                    <h5 class="card-title text-center">食品</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-2">
+                <div style="position:fixed; bottom: 0px;right:50px ">
+                    <a href="#" style="text-decoration:none; color:black ">
+                        <img class="animate__animated animate__headShake"
+                            style="animation-iteration-count: infinite; width:150px;" src="./IMG/客服.png">
+                        <h6 style="text-align: center; margin-top: -40px;">客服中心</h6>
+                    </a>
+                </div>
+                <div style="position: fixed;right:0px;bottom: 0px;">
+                    <a href="#">
+                        <i style="font-size: 40px;" class="bi bi-arrow-bar-up"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div style="width: 100%">
+        <div style="height:600px;">
+            <div style="background-color: rgb(125, 125, 144);">
+                <div class="row ">
+                    <div class=" col-12 h-25">
+                        <pre class="container mt-3" style="font-size:larger; color:white">
+        <b style="font-size: 25px;">政令宣導</b>
+                        
+                為防治動物傳染病，境外動物或動物產品等應施檢疫物輸入我國，
+                應符合動物檢疫規定，並依規定申請檢疫。擅自輸入應施檢疫物者最高可處7年以下有期徒刑，得併科新臺幣300萬元以下罰金。
+                未規定申請檢疫者，將課以新臺幣100萬元以下罰鍰，並得按次處罰。
+                境外商品不得隨貨贈送應施檢疫物。
+                收件人違反動物傳染病防治條例第34條第3項規定，
+                未將郵遞寄送輸入之應施檢疫物送交輸出入動物檢疫機關銷燬者，
+                處新臺幣3萬元以上15萬元以下罰鍰。
+                        </pre>
+                    </div>
+                    <div class="col-12" style="width:100%; background-color:rgb(24, 24, 72);height: 300px;">
+                        <div>
+                            <div class="container mt-3" style="font-size:16px;color:white ">
+                                <b style="font-size: 25px;margin-left: 85px;">其他服務</b>
+                                <br>
+                                <table style="margin-left: 168px; width: 900px;height: 180px;">
+                                    <tr>
+                                        <th>關於我們</th>
+                                        <th>聯絡我們</th>
+                                        <th>顧客權益</th>
+                                        <th>人才招募</th>
+                                        <th>付款</th>
+                                    </tr>
+                                    <tr>
+                                        <th>商品專櫃總覽</th>
+                                        <th>常見Q&A </th>
+                                        <th>退換貨說明</th>
+                                        <th>招商專區</th>
+                                        <th>
+                                            <img style="width:50px; height:30px;;box-shadow: 30px;
+                                            box-shadow: 2px 5px 15px 1px #ffff;
+                                            " src="https://upload.wikimedia.org/wikipedia/commons/a/ac/Old_Visa_Logo.svg"
+                                                alt="">
+                                            <img style="width:50px; height:30px;;box-shadow: 30px;
+                                            box-shadow: 2px 5px 15px 1px #ffff;
+                                            " src="http://www.tw.jcb/zh-tw/common/images/jcb_emblem_logo.png" alt="">
+                                            <img style="width:50px; height:30px;;box-shadow: 30px;
+                                            box-shadow: 2px 5px 15px 1px #ffff;
+                                            " src="http://4.bp.blogspot.com/-f8OrhruNn0g/VWcUmYEZN_I/AAAAAAAAH50/1rJlkT5Gq0A/s1600/MasterCard_early_1990s_logo.png"
+                                                alt="">
+                                        </th>
+                                    </tr>
+                                    <tr>
+                                        <th>24h到貨說明</th>
+                                        <th>服務條款</th>
+                                        <th>隱私權聲明</th>
+                                        <th>企業合作</th>
+                                    </tr>
+                                    <tr>
+                                        <th></th>
+                                        <th></th>
+                                        <th>防詐騙宣導</th>
+                                        <th></th>
+                                    </tr>
+                                </table>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="f01" class="e05">
+        <div class="e04">
+            <div style="width:600px;height: 700px; display: flex;align-items: center ">
+                <img style="width:500px;"
+                    src="https://fs-a.ecimg.tw/img/h24/v2/layout/index/hit/0632c2932a008b632c2932a00d1ecman1/0_1_20230217180100.jpg"
+                    alt="">
+                <button onclick="f02()" class="e03" 
+                style="position: relative;bottom:295px;right: 50px; border: none;background-color:transparent">
+                    <i style="font-size: 40px;z-index: 1;" class="bi bi-x-circle-fill"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+    <script>
+        var x = document.getElementById("f01");
+        var y = document.getElementById("f02");
+        // <!-- div class="e01" 一開始隱藏visibility: hidden; -->
+
+        // < !--經過2s後setTimeout  更改 div class="e01屬性為  visibility: visible;-->
+        setTimeout(function () {
+            x.classList.remove("e05");
+        }, 1000)
+        // < !--連結button class="e03" 點擊後更改 div class="e01屬性為visibility: hidden;  -->
+        function f02() {
+            x.classList.add("e05");
+        }
+
+    </script>
+
+
+</body>
+
+</html>

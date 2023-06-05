@@ -1,0 +1,799 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>商品介紹</title>
+
+    <!-- css -->
+    <link rel="stylesheet" href="css.style.css">
+    <!-- jq -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+
+    <!-- js -->
+    <script src="script.js"></script>
+
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="	https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
+    <script src="	https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- icon -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <style>
+        /* #bee {
+            width: 550px;
+            height: 500px;
+            object-fit: cover;
+        } */
+
+        .mybg1{
+            -webkit-box-shadow: 2px 6px 8px 9px rgba(0, 0, 0, 0.371);
+            box-shadow: 3px 6px 20px 13px rgba(0, 0, 0, 0.234);
+        }
+        .a06 {
+            display: none;
+        }
+
+        .a06 a:hover {
+            color: #ff0a4f !important;
+        }
+
+
+        .a05 {
+            margin-left: 300px;
+            margin-top: 55px;
+        }
+
+        .a05 :hover>.a06 {
+            display: block;
+        }
+
+        div.col-4>img {
+            width: 550px;
+            height: 500px;
+        }
+
+        .e01 {
+            position: fixed;
+            top: 0px;
+            bottom: 0px;
+            left: 0px;
+            right: 0px;
+            background-color: rgba(0, 0, 0, 0.6);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 2;
+            cursor: pointer;
+        }
+
+        .e02:hover {
+            cursor: pointer;
+        }
+
+        .d01 {
+            position: sticky;
+            top: 0px;
+            z-index: 1;
+        }
+
+        .myimage {
+            width: 400px;
+            height: 450px;
+        }
+
+        .e01 .myimage {
+            max-width: 90%;
+            max-height: 90%;
+            object-fit: contain;
+        }
+
+        /* .carousel-item>img {
+            width: 550px;
+            height: 500px;
+            object-fit: cover;
+
+        } */
+    </style>
+</head>
+
+<body style="background-color: #faf8f6;">
+    <!-- <div class="row "> -->
+    <div class="row">
+        <nav class="col-12 navbar navbar-expand-lg " style="width: 100%; background-color:#934A5F; ">
+            <div class="container-fluid ">
+                <a class="navbar-brand" href="#" style="margin-left:100px; color: #E5E5E5"><B>SHOPEEEE</B> </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse " id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="#" style="color:white;">賣家中心</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" style="color:white;">幫助中心</a>
+                        </li>
+                    </ul>
+                    <ul class=" navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item dropdown">
+                            <a style="color:white" class="nav-link dropdown-toggle" href="#" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false" id="navbarDropdown">
+                                語言
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="#">繁體中文</a></li>
+                                <li><a class="dropdown-item" href="#">English</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a style="color:white" class="nav-link" href="./註冊.2.19.html" style="margin-right:100px">登入/註冊</a>
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+        </nav>
+        <div class="col-12 d01" style="width:100%; height: 140px; background-color:#c4b6ae;">
+            <div class="row" style="width:100%;height:150px">
+                <div class=" col-12 mt-2 d-inline-flex " style=" margin-left: 150px; width: 1300px;">
+                    <div class="row">
+                        <div class="col-1">
+                            <a href="#">
+                                <img style="width: 120px;" src="./IMG/logo.png">
+                            </a>
+                        </div>
+
+
+                        <!-- 往上移 搜尋框繪製頂 -->
+                        <div class="col-11 ">
+                            <div class="row " style="width: 1100px">
+                                <input class="col-8 mt-3 " style="margin-left: 100px; height:50px;width:600px"
+                                    type="text" placeholder="輸入想要的商品">
+                                <button class="col-2 mt-2 " type="button" style="background-color: transparent;
+                                               border:none; 
+                                               margin-left:-110px;">
+                                    <div class="ms-5 mt-2 "
+                                        style="border-radius: 8px;background-color: #3a4567 ; width:40px;height:40px">
+                                        <i class="bi bi-search"
+                                            style="font-size: 25px; color:white;text-align: center;"></i>
+                                    </div>
+                                </button>
+                                <a href="#" class="col-2 ms-auto mt-2 " style="color:white;;">
+                                    <i class="bi bi-cart-fill" style="font-size: 40px;"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 a05 " style="width: 1150px; position: relative; left:20px; bottom: 80px;">
+                    <ul style="text-decoration:none;list-style:none">
+                        <li>
+                            <a class="btn  me-3 px-3 py-1" href="#"
+                                style=" color:white;     background-color:#765c57; height:25px;font-size: 0.85rem;">
+                                服飾</a>
+                            <a class="btn  me-3 px-3 py-1" href="#"
+                                style=" color:white;     background-color: #765c57; height:25px;font-size: 0.85rem;">手機</a>
+                            <a class="btn  me-3 px-3 py-1" href="#"
+                                style=" color:white;     background-color: #765c57; height:25px;font-size: 0.85rem;">家電</a>
+                            <a class="btn  me-3 px-3 py-1" href="#"
+                                style=" color:white;     background-color: #765c57; height:25px;font-size: 0.85rem;">日常用品</a>
+                            <a class="btn  me-3 px-3 py-1" href="#"
+                                style=" color:white;     background-color: #765c57; height:25px;font-size: 0.85rem;">書籍</a>
+                            <a class="btn  me-3 px-3 py-1" href="#"
+                                style=" color:white;     background-color: #765c57; height:25px;font-size: 0.85rem;">包包</a>
+                            <a class="btn  me-3 px-3 py-1" href="#"
+                                style=" color:white;     background-color: #765c57; height:25px;font-size: 0.85rem;">電腦</a>
+                            <a class="btn  me-3 px-3 py-1" href="#"
+                                style=" color:white;     background-color: #765c57; height:25px;font-size: 0.85rem;">食品</a>
+                            <a class="btn  me-3 px-3 py-1" href="#"
+                                style=" color:white;     background-color: #765c57; height:25px;font-size: 0.85rem;">禮品</a>
+                            <a class="btn  me-3 px-3 py-1" href="#"
+                                style=" color:white;     background-color: #765c57; height:25px;font-size: 0.85rem;">保護殼</a>
+                            <a class="btn  me-3 px-3 py-1" href="#"
+                                style=" color:white;     background-color: #765c57; height:25px;font-size: 0.85rem;">交換禮物</a>
+                            <a class="btn  me-3 px-3 py-1" href="#"
+                                style=" color:white;     background-color: #765c57; height:25px;font-size: 0.85rem;">乾燥花</a>
+                        </li>
+                        <div class="a06"
+                            style=" border-radius: 10px ; width:1000px;height: 300px; ;z-index: 1; background-color: rgba(255, 255, 255,0.7); position: absolute;">
+                            <div class="ms-3 mt-4">
+                                <li class="mt-3 " style="line-height:30px">
+                                    <a href="#" style="text-decoration:none;color:black;margin-right: 45px;">衣服</a>
+                                    <a href="#" style="text-decoration:none;color:black;margin-right: 43px;">蘋果</a>
+                                    <a href="#" style="text-decoration:none;color:black;margin-right: 48px">冰箱</a>
+                                    <a href="#" style="text-decoration:none;color:black;margin-right: 40px">洗衣精</a>
+                                    <a href="#" style="text-decoration:none;color:black;margin-right: 21px">推理小說</a>
+                                    <a href="#" style="text-decoration:none;color:black;margin-right: 35px">電腦包</a>
+                                    <a href="#" style="text-decoration:none;color:black;margin-right: 43px">蘋果</a>
+                                    <a href="#" style="text-decoration:none;color:black;">餅乾</a>
+                                </li>
+                                <li style="line-height:30px">
+                                    <a href="#" style="text-decoration:none;color:black;margin-right: 45px;">長褲</a>
+                                    <a href="#" style="text-decoration:none;color:black;margin-right: 38px">Sony</a>
+                                    <a href="#" style="text-decoration:none;color:black;margin-right: 48px">電視</a>
+                                    <a href="#" style="text-decoration:none;color:black;margin-right: 55px">電池</a>
+                                    <a href="#" style="text-decoration:none;color:black;margin-right: 54px">漫畫</a>
+                                    <a href="#" style="text-decoration:none;color:black;margin-right: 35px">後背包</a>
+                                    <a href="#" style="text-decoration:none;color:black;margin-right: 45px">MSI</a>
+                                    <a href="#" style="text-decoration:none;color:black">糖果</a>
+
+                                </li>
+                                <li style="line-height:30px">
+                                    <a href="#" style="text-decoration:none;color:black;margin-right: 45px;">外套</a>
+                                    <a href="#" style="text-decoration:none;color:black;margin-right: 4px;">Samsung</a>
+                                    <a href="#" style="text-decoration:none;color:black;margin-right: 34px;">洗衣機</a>
+                                    <a href="#" style="text-decoration:none;color:black;margin-right: 39px;">洗手乳</a>
+                                    <a href="#" style="text-decoration:none;color:black;margin-right: 22px;">驚悚小說</a>
+                                    <a href="#" style="text-decoration:none;color:black;margin-right: 36px;">斜背包</a>
+                                    <a href="#" style="text-decoration:none;color:black;;margin-right: 32px;">ASUS</a>
+                                    <a href="#" style="text-decoration:none;color:black">海苔</a>
+
+                                </li>
+                                <li style="line-height:30px">
+                                    <a href="#" style="text-decoration:none;color:black;margin-right: 51px;">帽T</a>
+                                    <a href="#" style="text-decoration:none;color:black;margin-right: 20px">Google</a>
+                                    <a href="#" style="text-decoration:none;color:black;margin-right: 49px">檯燈</a>
+                                    <a href="#" style="text-decoration:none;color:black;margin-right: 55px">毛巾</a>
+                                    <a href="#" style="text-decoration:none;color:black;margin-right: 54px">食譜</a>
+                                    <a href="#" style="text-decoration:none;color:black;margin-right: 36px">波特包</a>
+                                    <a href="#" style="text-decoration:none;color:black;margin-right: 41px">acer</a>
+                                    <a href="#" style="text-decoration:none;color:black">微波食品</a>
+
+                                </li>
+                                <li style="line-height:30px">
+                                    <a href="#" style="text-decoration:none;color:black;margin-right: 45px">西裝</a>
+                                    <a href="#" style="text-decoration:none;color:black;margin-right: 22px">Xiaomi</a>
+                                    <a href="#" style="text-decoration:none;color:black;margin-right: 34px">電風扇</a>
+                                    <a href="#" style="text-decoration:none;color:black;margin-right: 54px">牙膏</a>
+                                    <a href="#" style="text-decoration:none;color:black;margin-right: 39px">工具書</a>
+                                    <a href="#" style="text-decoration:none;color:black;margin-right: 51px">腰包</a>
+                                    <a href="#" style="text-decoration:none;color:black;margin-right: 36px">DELL</a>
+                                    <a href="#" style="text-decoration:none;color:black">腰果</a>
+
+                                </li>
+                                <li style="line-height:30px">
+                                    <a href="#" style="text-decoration:none;color:black;margin-right: 45px">布鞋</a>
+                                    <a href="#" style="text-decoration:none;color:black;margin-right: 208px">ASUS</a>
+                                    <a href="#" style="text-decoration:none;color:black;margin-right: 188px">考試用書</a>
+                                    <a href="#" style="text-decoration:none;color:black;">罐頭</a>
+
+                                </li>
+                            </div>
+                        </div>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div style="width: 1478px;height: 2000px;; background-color: #f8f6f4">
+
+        <nav id="siderbar">
+            <!-- 按鈕展開收起 -->
+            <button type="button" id="collapse" class="collapse-btn">
+                <i class="fa-solid fa-right-left"></i>
+            </button>
+            <!-- list -->
+            <ul class="list-unstyled ">
+                <h3 style="color:white;text-align: center;"><b>分類</b> </h3>
+                <li>
+                    <a href="#sublist" data-bs-toggle="collapse" id="dropdown">筆電 <i
+                            class="fa-solid fa-laptop-medical"></i></a>
+                    <ul id="sublist" class="list-unstyled collapse">
+                        <p><b>ASUS</b> </p>
+                        <li>
+                            <a href="#">ASUS TUF Gaming</a>
+                        </li>
+                        <li>
+                            <a href="#">ROG Strix SCAR 15 </a>
+                        </li>
+                        <li>
+                            <a href="#">ROG Strix G17</a>
+                        </li>
+                        <li>
+                            <a href="#">ROG Zephyrus </a>
+                        </li>
+                        <p><b>Apple</b> </p>
+                        <li>
+                            <a href="#">MacBook pro 14 M1</a>
+                        </li>
+                        <li>
+                            <a href="#">MacBook pro 16 M1 </a>
+                        </li>
+                        <li>
+                            <a href="#">MacBook pro M2</a>
+                        </li>
+                        <li>
+                            <a href="#">MacBook Air M1</a>
+                        </li>
+
+                        <p><b> Acer</b></p>
+
+                        <li>
+                            <a href="#">ACER Aspire</a>
+                        </li>
+                        <li>
+                            <a href="#">ACER SF314 </a>
+                        </li>
+                        <li>
+                            <a href="#">Acer Aspire3 </a>
+                        </li>
+                        <li>
+                            <a href="#">ACER Aspire 5</a>
+                        </li>
+
+                        <p><b> MSI</b></p>
+                        <li>
+                            <a href="#">MSI Modern 14</a>
+                        </li>
+                        <li>
+                            <a href="#">Sword 17 </a>
+                        </li>
+                        <li>
+                            <a href="#">Modern 15</a>
+                        </li>
+                        <li>
+                            <a href="#"> CreatorPro X17</a>
+                        </li>
+
+                    </ul>
+                </li>
+                <li>
+                    <a href="#sublist1" data-bs-toggle="collapse" id="dropdown1">手機 <i
+                            class="fa-solid fa-mobile"></i></a>
+                    <ul id="sublist1" class="list-unstyled collapse">
+                        <p> <b>Samsung</b></p>
+                        <li>
+                            <a href="#">S23 Ultra</a>
+                        </li>
+                        <li>
+                            <a href="#">S22 Ultra</a>
+                        </li>
+                        <li>
+                            <a href="#">S23+</a>
+                        </li>
+                        <li>
+                            <a href="#">S22+</a>
+                        </li>
+                        <li>
+                            <a href="#">A53</a>
+                        </li>
+                        <p><b>Sony</b> </p>
+                        <li>
+                            <a href="#">Xperia 1</a>
+                        </li>
+                        <li>
+                            <a href="#">Xperia 5</a>
+                        </li>
+                        <li>
+                            <a href="#">Xperia 10</a>
+                        </li>
+                        <p><b>Apple</b> </p>
+                        <li>
+                            <a href="#">iPhone 12 pro</a>
+                        </li>
+                        <li>
+                            <a href="#">iPhone XR</a>
+                        </li>
+                        <li>
+                            <a href="#">iPhone 11 pro</a>
+                        </li>
+                        <li>
+                            <a href="#">iPhone 11</a>
+                        </li>
+                        <p><b>Google</b> </p>
+                        <li>
+                            <a href="#">Google Pixel 4a</a>
+                        </li>
+                        <li>
+                            <a href="#">Google Pixel 5</a>
+                        </li>
+                        <li>
+                            <a href="#">Google Pixel 6</a>
+                        </li>
+                        <li>
+                            <a href="#">Google Pixel 6 pro</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#sublist2" data-bs-toggle="collapse" id="dropdown2">平板 <i
+                            class="fa-solid fa-tablet-screen-button"></i></a>
+                    <ul id="sublist2" class="list-unstyled collapse">
+                        <p><b>Lenovo</b> </p>
+                        <li>
+                            <a href="#">M10</a>
+                        </li>
+                        <li>
+                            <a href="#">P11</a>
+                        </li>
+                        <li>
+                            <a href="#">M10 Plus</a>
+                        </li>
+                        <li>
+                            <a href="#">P11 Plus</a>
+                        </li>
+                        <p><b> Samsung</b></p>
+                        <li>
+                            <a href="#">S7</a>
+                        </li>
+                        <li>
+                            <a href="#">S6</a>
+                        </li>
+                        <li>
+                            <a href="#">A8</a>
+                        </li>
+                        <p><b>TCL</b> </p>
+                        <li>
+                            <a href="#">TAB 10s</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#sublist3" data-bs-toggle="collapse" id="dropdown3">耳機 <i
+                            class="fa-solid fa-headphones"></i></a>
+                    <ul id="sublist3" class="list-unstyled collapse">
+                        <p><b> Sony</b></p>
+                        <li>
+                            <a href="#">WF-LS900N</a>
+                        </li>
+                        <li>
+                            <a href="#">MDR-XB55AP</a>
+                        </li>
+                        <li>
+                            <a href="#">MH750</a>
+                        </li>
+                        <li>
+                            <a href="#">WH-CH510</a>
+                        </li>
+                        <li>
+                            <a href="#">MDR-ZS110</a>
+                        </li>
+                        <p><b>Soundcore</b> </p>
+                        <li>
+                            <a href="#">Liberty 3 pro</a>
+                        </li>
+                        <li>
+                            <a href="#">Liberty 4</a>
+                        </li>
+                        <li>
+                            <a href="#">Life Q30</a>
+                        </li>
+                        <p><b>audio-technica</b> </p>
+                        <li>
+                            <a href="#">ATH-CKR70TW</a>
+                        </li>
+                        <li>
+                            <a href="#">ATH-CKS30TW</a>
+                        </li>
+                        <li>
+                            <a href="#">ATH-CK S50TW</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#sublist4" data-bs-toggle="collapse" id="dropdown4">鍵盤<i
+                            class="fa-solid fa-keyboard"></i></a>
+                    <ul id="sublist4" class="list-unstyled collapse">
+                        <p><b>羅技</b> </p>
+                        <li>
+                            <a href="#">MX KEY S MINI</a>
+                        </li>
+                        <li>
+                            <a href="#">MK235</a>
+                        </li>
+                        <li>
+                            <a href="#">G512</a>
+                        </li>
+                </li>
+
+
+            </ul>
+        </nav>
+
+        <!-- fixed -->
+        <div style="position: relative;
+            left:250px;
+            bottom:1450px; 
+            width: 1230px;
+            " class="row">
+            <div class="col-12 ">
+                <div class="row ">
+                    <div class="col-4 " style="width: 600px;">
+                        <img class="e02" src="https://cs-d.ecimg.tw/items/DHAS1UA900EUD1O/000001_1676021488.jpg" alt="">
+                        <!-- <div class="e01">
+                                <img src="https://cs-d.ecimg.tw/items/DHAS1UA900EUD1O/000001_1676021488.jpg" alt="">
+                            </div> -->
+                        <!-- <div id="bee" data-bs-interval="2000" class="carousel slide" data-bs-ride="carousel">
+                                <div class="carousel-indicators">
+                                    <button style=" background-color: rgb(170, 128, 128);" type="button"
+                                        data-bs-target="#apple" data-bs-slide-to="0" class="active" aria-current="true"
+                                        aria-label="Slide 1"></button>
+                                    <button style=" background-color: rgb(170, 128, 128);" type="button"
+                                        data-bs-target="#apple" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                                    <button style=" background-color: rgb(170, 128, 128);" type="button"
+                                        data-bs-target="#apple" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                                </div>
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <img src="https://cs-d.ecimg.tw/items/DHAS1UA900EUD1O/000001_1676021488.jpg">
+                                    </div>
+                                    <div class="carousel-item img-fluid">
+                                        <img
+                                            src="https://fs-a.ecimg.tw/img/projects/personal/v0/upload_file/US00025889/FX506HM/TUF%20Plastic%2015_08.jpg">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img
+                                            src="https://fs-a.ecimg.tw/img/projects/personal/v0/upload_file/US00025889/FX506HM/TUF%20Plastic%2015_01.jpg">
+                                    </div>
+                                </div>
+                                <button style=" color :brown;" class="carousel-control-prev" type="button"
+                                    data-bs-target="#apple" data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Previous</span>
+                                </button>
+                                <button style=" color: brown;" class="carousel-control-next" type="button"
+                                    data-bs-target="#apple" data-bs-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Next</span>
+                                </button>
+                            </div> -->
+
+                        <!-- 有放大鏡可以看細部照 -->
+
+                    </div>
+                    <div class="col-4 mybg1"
+                        style="margin-left: 85px; border-radius: 20px; width:500px;height:480px;background-color: rgb(254, 254, 254);">
+                        <div style="text-align: center;" class="mt-3 ">
+                            <h3 class="fw-bold" style="color:red; font-size: 30px;">RTX3060獨顯熱銷電競</h3>
+                            <h3 class="mt-3 fw-bold" style="font-size: 25px;">【ASUS TUF Gaming】ASUS
+                                FX506HM-0072B11400H 戰魂黑</h3>
+                            <div style="font-size: 18px; ">
+                                <p CLASS="mt-3"> 全新顯卡視覺享受 RTX 3060獨顯6G效能</p>
+                                <p>超屌效能 搭載2021新世代 Intel® Core™ i5-11400H Processor 2.7 GHz 處理器</p>
+                                <P>超狂容量 512GB M.2 NVMe™ PCIe® 3.0 SSD</P>
+                                <p> 全新升級 薄邊框螢幕 144Hz</p>
+                                <p>15吋FHD IPS 大屏佔比</p>
+                                <p>單區RGB多彩鍵盤/防塵散熱通道</p>
+                                <p>薄邊框/通過軍規測試</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-4 " id="c01"
+                        style="border-radius: 10px;background-color: #c4b6ae; width:60px;height: 225    px; position: fixed; right:0px;">
+                        <ul class="list-unstyled mt-1 ">
+                            <li>
+                                <a href="#"> <i class="bi bi-cart-check"></i></a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="bi bi-heart-fill"></i></a>
+
+
+                            </li>
+                            <li>
+                                <a href="#"> <i class="bi bi-clipboard-check"></i></a>
+
+                            </li>
+                            <li>
+                                <a href="#"> <i class="bi bi-file-person"></i></a>
+
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 mybg1"
+                style="margin-left: 20px; width:1180px; border-radius: 20px;margin-top:70px;background-color: white;height:550px">
+                <div class="row ">
+                    <div class="col-12 ">
+                        <h3 style="text-align: center;font-size: 30px;" class="fw-bold mt-3">產品規格</h3>
+                    </div>
+                    <div class="col-12 ">
+                        <ul style="line-height: 30px; margin-top: 25px; font-size: 18px;">
+                            <li>處理器：Intel® Core™ i5-11400H Processor 2.7 GHz (12M Cache, up to 4.5 GHz, 6 Cores)
+                            </li>
+                            <li>記憶體：8GB DDR4-3200 SO-DIMM</li>
+                            <li>硬碟：512GB M.2 NVMe™ PCIe® 3.0 SSD</li>
+                            <li>獨立顯卡：NVIDIA® GeForce RTX™ 3060 6G獨顯</li>
+                            <li>螢幕：15.6" FHD IPS 1920x1080 144Hz 薄邊框螢幕</li>
+                            <li>無線網路："Wi-Fi 6(802.11ax)+Bluetooth 5.2 (Dual band) 2*2"</li>
+                            <li>介面：HDMI、Thunderbolt™ 4</li>
+                            <li>電池：90WHrs, 4S1P, 4-cell Li-ion</li>
+                            <li>作業系統：Windows 11 (64bit)</li>
+                            <li>作業系統：Windows 11 (64bit)</li>
+
+                        </ul>
+                    </div>
+
+                    <div class="col-12 " style="display: inline-block; margin-top: -100px;">
+                        <h1 class="mb-3"
+                            style="margin-left: 600px;text-decoration: line-through; text-align: center ; color:rgba(128, 128, 128,0.7);font-size: 20px;">
+                            $37900</h1>
+                        <h1 style="text-align: center;margin-left: 700px;  color:red;font-size: 50px;">$29,999
+                        </h1>
+                    </div>
+                    <div style="margin-top: 70px;">
+                        <button class="me-3 "
+                            style="padding: 5px; border-radius: 10px; font-size: 25px ;border:none; background-color: #934A5F;color:white; float: right;">立即購買</button>
+                        <button
+                            style="padding: 5px;border-radius: 10px;font-size: 25px;background-color: #934A5F; border:none;color:white; float: right; margin-right: 20px;">加入購物車</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="row ">
+                    <div class="col-12">
+                        <div class="row ">
+                            <div class="col-9 mt-5 " style="height: 1400px;;">
+                                <div class="mybg1" style="background-color: white;padding: 30px; border-radius: 20px;">
+                                    <h3 class="mb-4"><b>更多資訊</b> </h3>
+                                    <div>
+                                        <img style="width: 100%;"
+                                            src="https://fs-a.ecimg.tw/img/projects/personal/v0/upload_file/US00025889/BANNER_ROG/ROG_BANNER_PASSORT_1000.jpg"
+                                            alt="">
+                                    </div>
+                                    <div>
+                                        <img style="width: 100%;" class="mt-5"
+                                            src="https://fs-a.ecimg.tw/img/projects/personal/v0/upload_file/US00025889/banner_warranty1_1000.jpg"
+                                            alt="">
+                                    </div>
+                                    <div>
+                                        <img style="width: 45%" class="mt-5"
+                                            src="https://cf.shopee.tw/file/809840cb029eb0033e6fdc22b7c4e792" alt="">
+                                        <img style="width: 45%; margin-left: 78px;" class="mt-5"
+                                            src="https://cf.shopee.tw/file/fa54cc37bc261ac96f517d078a7f5f6d" alt="">
+                                    </div>
+                                </div>
+                                <div class="mybg1"
+                                    style="border-radius: 20px;padding: 30px; background-color: white; margin-top: 80px;">
+                                    <h3><b>ASUS TUF Dash F15 開箱！兼具攜帶性和效能的高人氣系列筆電來啦！</b>
+                                        <h4 class="fw-lighter fst-italic">--電獺少女-女孩的科技日常</h4>
+                                    </h3>
+                                    <iframe style="width: 100%; height: 500px; margin-top: 10px;"
+                                        src="https://www.youtube.com/embed/SnLN6bammUk"
+                                        title="ASUS TUF Dash F15 開箱！兼具攜帶性和效能的高人氣系列筆電來啦！" frameborder="0"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                        allowfullscreen></iframe>
+                                </div>
+                            </div>
+                            <div class="col-3" style="padding: 30px; border-radius: 20px;">
+                                <div
+                                    style="margin-bottom: 20px; margin-left: 60px; margin-top: 20px; background-color: #934A5F; width:150px;height: 50px;border-radius: 10px;">
+                                    <h3 style="padding-top: 6px; text-align: center;color: white;">
+                                        <b>猜您喜歡</b>
+                                    </h3>
+                                </div>
+                                <div class="row ">
+                                    <div class="col-12 ">
+                                        <div class="card text-center mt-1 ms-3 mybg1" style="width:250px; ">
+                                            <img src="https://cs-a.ecimg.tw/items/DYAJEW1900FG0W8/000001_1661916274.jpg"
+                                                class="card-img-top">
+                                            <div class="card-body">
+                                                <h5 class="card-title mb-4" style="font-size:18px"> MacBook Air13 午夜色
+                                                    256GB
+                                                </h5>
+                                                <ul class="card-text mb-4 me-4"
+                                                    style="font-size:16px;list-style: none;">
+                                                    <li>
+                                                        Apple M2 晶片
+                                                    </li>
+                                                    <li>
+                                                        8 核心 CPU
+                                                    </li>
+                                                    <li>8 核心 GPU</li>
+                                                    <li>
+                                                        16 核心神經網路引擎
+                                                    </li>
+                                                </ul>
+
+                                                <a href="#" class="btn btn-warning ">立刻購買!</a>
+                                            </div>
+                                        </div>
+                                        <div class=" col-12 ms-3 mt-3">
+                                            <div class="mybg1 card text-center mt-1 " style="width:250px; ">
+                                                <img src="https://cs-a.ecimg.tw/items/DHAK5T1900FSKME/000001_1676253768.jpg"
+                                                    class="card-img-top">
+                                                <div class="card-body">
+                                                    <h5 class="card-title mb-4" style="font-size:18px"> MSI 微星 Vector
+                                                        GP66
+                                                        12UE-406TW 電競筆電
+                                                    </h5>
+                                                    <ul class="card-text mb-4 me-4"
+                                                        style="font-size:16px;list-style: none;">
+                                                        <li class="mb-2">
+                                                            搭載第12代 Intel® Core™ i7 處理器
+                                                        </li>
+                                                        <li class="mb-2">
+                                                            搭載 RTX™ 3060
+                                                        </li>
+                                                        <li class="mb-2">單鍵RGB全彩背光鍵盤</li>
+                                                        <li>
+                                                            Wi-Fi 6E極速無線網路
+                                                        </li>
+                                                    </ul>
+
+                                                    <a href="#" class="btn btn-warning ">立刻購買!</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 ms-3 mt-3">
+                                            <div class="mybg1 card text-center mt-1" style="width:250px; ">
+                                                <img src="https://cs-a.ecimg.tw/items/DHAI7WA900EDJ55/000001_1646290407.jpg"
+                                                    class="card-img-top">
+                                                <div class="card-body">
+                                                    <h5 class="card-title mb-4" style="font-size:18px"> DELL Inspiron
+                                                        14-5425-R1708STW 銀河星跡
+                                                    </h5>
+                                                    <ul class="card-text mb-4 me-4"
+                                                        style="font-size:16px;list-style: none;">
+                                                        <li class="mb-2">
+                                                            AMD Ryzen™ 7 5825U
+                                                        </li>
+                                                        <li class="mb-2">
+                                                            16GB (2x8GB) 3200MHz
+                                                        </li>
+                                                        <li class="mb-2">AMD Radeon™ 顯卡</li>
+                                                        <li>
+                                                            512GB M.2 PCIe NVMe SSD
+                                                        </li>
+                                                    </ul>
+
+                                                    <a href="#" class="btn btn-warning ">立刻購買!</a>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        for (var img of document.getElementsByClassName("e02")) {
+
+            img.addEventListener("click", () => {
+
+                var container = document.createElement("div");
+                container.classList.add("e01");
+                container.onclick = function () {
+                    container.remove()
+                }
+
+                var innerImg = document.createElement("img");
+                innerImg.classList.add("myimage")
+                innerImg.src = img.src;
+
+
+                container.onwheel = function (event) {
+                    const width = getComputedStyle(innerImg).width.slice(0, -2);
+                    const height = getComputedStyle(innerImg).height.slice(0, -2);
+
+                    if (event.deltaY > 0) {
+                        innerImg.style.width = parseInt(width) * 1.2 + "px";
+                        innerImg.style.height = parseInt(height) * 1.2 + "px";
+                    } else if (event.deltaY < 0) {
+                        innerImg.style.width = parseInt(width) * 0.8 + "px";
+                        innerImg.style.height = parseInt(height) * 0.8 + "px";
+                    }
+                }
+
+                container.append(innerImg);
+
+                document.body.append(container);
+            })
+        }
+    </script>
+</body>
+
+</html>
